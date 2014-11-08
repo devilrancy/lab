@@ -1,0 +1,27 @@
+<div class="padding-bottom">
+
+	<div ng-show="!title">
+		<div class="loader">
+			<i class="icon ion-loading-d"></i>
+		</div>
+	</div>
+
+	<div ng-show="title">
+
+		<div class="list card">
+
+			<div class="item">
+			<h2 ng-bind-html="title"></h2>
+			<p>{{date | formatDate}}</p>
+			</div>
+
+			<div class="item item-body">
+				<img ng-show="{{featured}}" class="full-image" ng-src="{{post.featured_image.attachment_meta.sizes.medium.url}}">
+				<p ng-bind-html="content | allow_html"></p>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="{{modalClass}}">
+	<ion-modal-view>
+	
+		<ion-header-bar>
+			<div class="buttons">
+				<button class="button button-icon icon ion-close" ng-click="closeModal()"></button>
+			</div>
+			<h1 class="title"></h1>
+			<div class="buttons">
+			</div>
+		</ion-header-bar>
+		<ion-content>
+
+			<div ng-show="!modalImage">
+				<div class="loader">
+					<i class="icon ion-loading-d"></i>
+				</div>
+			</div>
+	
+			<img ng-show="modalImage" class="modalImage" ng-src="{{modalImage}}">
+		</ion-content>
+		
+	</ion-modal-view>
+</div>

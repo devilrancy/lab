@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title></title>
+
+		<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Dynamic css is loaded here by api -->
+		<style ng-bind-html="styles">
+		</style>
+
+		<!-- ionic/angularjs js -->
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+
+		<!-- cordova script (this will be a 404 during development) -->
+		<script src="cordova.js"></script>
+
+		<!-- app loader js -->
+		<script src="app.js"></script>
+
+		<!-- routes js -->
+		<script src="js/routes/routes.js"></script>
+
+		<!-- controller js -->
+		<script src="js/controllers/controllers.js"></script>
+		<script src="js/controllers/detail-controller.js"></script>
+		<script src="js/controllers/page-controller.js"></script>
+		<script src="js/controllers/component-controller.js"></script>
+		<script src="js/directives/map-directive.js"></script>
+
+		<!-- factory js -->
+		<script src="js/factory/template-factory.js"></script>
+		<script src="js/factory/data-factory.js"></script>
+
+		<!-- filters js -->
+		<script src="js/filters/filters.js"></script>
+		
+		<!-- do not remove -->
+		<!--PUSHSCRIPTS-->
+
+        <script type="text/javascript" src="lib/pg/pg-iad.js"></script>
+		
+		<!-- do not remove -->
+        <!--GOOGLEMAPSSCRIPT-->
+
+        <script>
+			document.addEventListener( 'deviceready', onDeviceReady, false );
+
+			function onDeviceReady() {
+
+				if( StatusBar ) {
+					StatusBar.overlaysWebView(true);
+				}
+
+				if( navigator.splashscreen ) {
+					setTimeout(function() {
+						navigator.splashscreen.hide();
+					}, 2000);
+				}
+			}
+
+			function init() {
+
+			}
+		</script>
+
+	</head>
+
+	<body onload="init();">
+		<ion-nav-view></ion-nav-view>
+
+		<!-- Google Analytics -->
+		<script type="text/javascript" src="lib/pg/pg-analytics.js"></script>
+	</body>
+</html>

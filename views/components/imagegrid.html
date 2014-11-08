@@ -1,0 +1,9 @@
+<div ng-show="!images">
+	<div class="loader">
+		<i class="icon ion-loading-d"></i>
+	</div>
+</div>
+
+<div ng-repeat="image in images" class="grid-list-item">
+	<img ng-click="openModal({{image.ID}})" ng-src="{{image.meta.sizes.thumbnail.url}}">
+</div>

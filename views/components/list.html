@@ -1,0 +1,11 @@
+<div ng-show="!posts">
+	<div class="loader">
+		<i class="icon ion-loading-d"></i>
+	</div>
+</div>
+<ion-list>
+	<ion-item ng-repeat="post in posts" class="list-item" href="#/app/{{detail}}/{{post.ID}}">
+		<h2 ng-bind-html="post.title"></h2>
+		<p ng-bind-html="post.excerpt | striptags"></p>
+	</ion-item>
+</ion-list>

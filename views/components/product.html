@@ -1,0 +1,27 @@
+<div class="padding">
+
+	<div ng-show="!title">
+		<div class="loader">
+			<i class="icon ion-loading-d"></i>
+		</div>
+	</div>
+
+	<div class="product" ng-show="title">
+		<!--img ng-show="{{featured}}" class="full-image" ng-src="{{featured}}"-->
+		<div class="product-gallery" ng-repeat="image in data.meta_fields.woo.image_gallery.images">
+			<img ng-show="{{image.url}}" class="thumbnail-image" ng-src="{{image.url}}">
+		</div>
+		<div class="post-title">
+			<h4 ng-bind-html="title"></h4>
+		</div>
+		<p class="post-category" ng-bind-html="category"></p>
+		<div class="product-meta">
+			<p class="product-price" ng-if="data.meta_fields.woo.price">${{data.meta_fields.woo.price}}</p>
+		</div>
+
+		<div class="post-content" ng-bind-html="content | allow_html"></div>
+
+		<p><button class="button button-positive button-block" ng-click="openBrowser(link + '?add-to-cart=' + data.ID)">Add to Cart</button></p>
+	</div>
+
+</div>
